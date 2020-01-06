@@ -19,7 +19,7 @@ public class LeftEdgeThread extends KochThread{
         kochfractal.setLevel(nxt);
         kochfractal.generateLeftEdge();
 
-        System.out.println("left";
+        System.out.println("left");
     }
 
     public void addEdges() {
