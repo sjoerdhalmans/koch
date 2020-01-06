@@ -33,6 +33,10 @@ public class KochManager {
         this.tsCalc = new TimeStamp();
         this.tsDraw = new TimeStamp();
     }
+
+    public ArrayList<Edge> getEdges(){
+        return edges;
+    }
     
     public void changeLevel(int nxt) throws InterruptedException {
         ExecutorService executor = Executors.newFixedThreadPool(3);

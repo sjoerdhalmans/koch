@@ -52,9 +52,12 @@ public class calculate {
         KochManager kochManager = new KochManager(null);
         LeftEdgeThread leftEdgeThread = new LeftEdgeThread(kochManager, 12);
         RightEdgeThread rightEdgeThread = new RightEdgeThread(kochManager, 12);
+        BottomEdgeThread bottomEdgeThread = new BottomEdgeThread(kochManager, 12);
+
 
         futures.add(executor.submit(leftEdgeThread));
         futures.add(executor.submit(rightEdgeThread));
+        futures.add(executor.submit(bottomEdgeThread));
 
         try {
             for (Future future : futures) {
@@ -66,6 +69,7 @@ public class calculate {
 
         leftEdgeThread.addEdges();
         rightEdgeThread.addEdges();
+        bottomEdgeThread.addEdges();
 
         assertNotEquals(12582912, kochManager.getEdges().size());
     }
