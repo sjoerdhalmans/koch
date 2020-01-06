@@ -1,4 +1,3 @@
-
 import org.junit.Test;
 import calculate.KochManager;
 import calculate.LeftEdgeThread;
@@ -9,12 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
+import static junit.framework.Assert.assertFalse;
 import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertNotSame;
-import static org.junit.Assert.assertNotEquals;
 
 
-public class calculate {
+public class CalculateTest {
 
 
     @Test
@@ -69,9 +67,9 @@ public class calculate {
 
         leftEdgeThread.addEdges();
         rightEdgeThread.addEdges();
-        bottomEdgeThread.addEdges();
 
-        assertNotEquals(12582912, kochManager.getEdges().size());
+
+        assertFalse(12582912 == kochManager.getEdges().size());
     }
 
 }
