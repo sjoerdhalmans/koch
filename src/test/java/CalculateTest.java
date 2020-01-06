@@ -67,7 +67,7 @@ public class CalculateTest {
 
         leftEdgeThread.addEdges();
         rightEdgeThread.addEdges();
-        bottomEdgeThread.addEdges();
+        
 
 
         assertFalse(12582912 == kochManager.getEdges().size());
