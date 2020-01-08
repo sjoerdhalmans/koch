@@ -40,7 +40,7 @@ public class CalculateTest {
         rightEdgeThread.addEdges();
         bottomEdgeThread.addEdges();
 
-        assertEquals(12582911, kochManager.getEdges().size());
+        assertEquals(12582912, kochManager.getEdges().size());
     }
 
     @Test
